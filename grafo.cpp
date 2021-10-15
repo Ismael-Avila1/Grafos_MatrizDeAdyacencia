@@ -46,7 +46,7 @@ void Grafo::imprimir() {
     int i, j;
 
     if(posLastNode == -1) {
-        std::cout << "Grafo Vacio" << std::endl;
+        std::cout << std::endl << "Grafo Vacio" << std::endl;
         return;
     }
 
