@@ -50,12 +50,12 @@ void Grafo::imprimir() {
         return;
     }
 
-    for(i=0; i<=posLastNode; i++) {
+    for(i=0; i<posLastNode; i++) {
         arr[i].imprimir();
 
         std::cout << std::endl << "\tDe " << arr[i].nombre << " puedes ir a ... " << std::endl << std::endl;
 
-        for(j=0; j<=posLastNode; j++)
+        for(j=0; j<posLastNode; j++)
             if(matriz[i][j] != 0)
                 std::cout << "\t\t" << arr[j].nombre << ". Que esta a una distancia de " << matriz[i][j] << "km" << std::endl;
     }
