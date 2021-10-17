@@ -43,19 +43,18 @@ void Grafo::insertarAdyacencia(std::string origen, std::string destino, int valo
 }
 
 void Grafo::imprimir() {
-    int i, j;
 
     if(posLastNode == -1) {
         std::cout << std::endl << "Grafo Vacio" << std::endl;
         return;
     }
 
-    for(i=0; i<posLastNode; i++) {
+    for(int i=0; i<posLastNode; i++) {
         arr[i].imprimir();
 
         std::cout << std::endl << "\tDe " << arr[i].nombre << " puedes ir a ... " << std::endl << std::endl;
 
-        for(j=0; j<posLastNode; j++)
+        for(int j=0; j<posLastNode; j++)
             if(matriz[i][j] != 0)
                 std::cout << "\t\t" << arr[j].nombre << ". Que esta a una distancia de " << matriz[i][j] << "km" << std::endl;
     }
